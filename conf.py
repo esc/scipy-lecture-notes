@@ -44,6 +44,7 @@ extensions = [
         'sphinx.ext.pngmath',
         'sphinx.ext.intersphinx',
         'sphinx.ext.extlinks',
+        'hieroglyph',
 ]
 
 doctest_test_doctest_blocks = 'true'

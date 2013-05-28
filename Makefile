@@ -26,6 +26,7 @@ help:
 	@echo "  linkcheck to check all external links for integrity"
 	@echo "  install   to upload to github the web pages"
 	@echo "  zip       to create the zip file with examples and doc"
+	@echo "  slides    to make hieroglyph slides"
 
 clean:
 	-rm -rf build/*
@@ -92,6 +93,10 @@ zip: html pdf
 	cp -r data build/scipy_lecture_notes ;
 	cp PythonScientific.pdf build/scipy_lecture_notes;
 	zip -r build/scipy_lecture_notes.zip build/scipy_lecture_notes  
+
+slides:
+	mkdir -p build/slides ;
+	$(SPHINXBUILD) -b slides $(ALLSPHINXOPTS) build/slides/ ;
 
 install: pdf html 
 	rm -rf build/scipy-lectures.github.com
